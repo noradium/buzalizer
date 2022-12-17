@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  height: 46px;
+  width: 100%;
+  background-color: #ccf;
+  padding: 0 2rem;
+  align-items: center;
+  font-weight: bold;
+}
+
+.root {
+  flex: 1;
+  font-size: 20px;
+}
+
+.child {
+  font-size: 18px;
+}

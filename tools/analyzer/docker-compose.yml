@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  nodejs:
+    build:
+      context: ./nodejs/
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/src/app # アプリケーションの相対パスを.env指定
+    command: sh -c "npm run dev" # .envにプロジェクト名を定義
+    ports:
+      - "3000:3000"
+  redis:
+    image: "redis:latest"
+    ports:
+      - "6379:6379"
+    volumes:
+      - "./data/redis:/data"
